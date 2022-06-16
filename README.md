@@ -25,16 +25,6 @@ $quest->setResult($item,$money,$addXpJob); //$money et $addXpJob est nullable
 ```
 # Ajouter une conditon à la quêtes
 
-## Tuer un joueur
-```php
-
-use GoldRush\QuestCreator\Condition;
-use pocketmine\Server;
-
-$target = Server::getInstance()->getPlayerByPrefix("theohdg2");
-$quest->addCondition(Condition::COND_TYPE_KILL_PLAYER,$target);
-```
-
 ## Tuer un mob/boss
 ```php
 $quest->addCondition(Condition::COND_TYPE_KILL_ENTITY,Entity::class);
