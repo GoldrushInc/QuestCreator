@@ -19,7 +19,7 @@ $quest = new Quest();
 ```php
 $items = []; //doit être un array d'item
 $money = 100; //doit être un entier positif
-$addXpJob = [(new XpJob("mineur",100))]; //doit être un array de XpJob, métier disponible: mineur,farmeur,assasin,bucheron
+$addXpJob = ["mineur:1"]; //doit être un array de string, métier disponible: mineur,farmeur,assasin,bucheron
 
 $quest->setResult($item,$money,$addXpJob); //$money et $addXpJob est nullable
 ```
