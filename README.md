@@ -10,11 +10,18 @@ utiliser QuestCreator est très simple, il vous suffit juste de suivre ce tuto
 <?php
 
 use GoldRush\QuestCreator\Quest;
-use pocketmine\item\VanillaItems;
 
-$quest = (new Quest())
-    ->setResult(VanillaItems::APPLE());
+$quest = new Quest();
 ```
+
+# Definir la récompense de cette quête
+
+```php
+$items = []; //doit être un array d'item
+$money = 100; //doit être un entier positif
+$addXpJob = [(new XpJob("mineur",100))]; //doit être un array de XpJob, métier disponible: mineur,farmeur,assasin,bucheron
+
+$quest->setResult($item,$money,$addXpJob); //$money et $addXpJob est nullable
 
 # Ajouter une conditon à la quêtes
 
